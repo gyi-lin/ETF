@@ -10,9 +10,16 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-# 设置全局字体
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial Unicode MS', 'Microsoft YaHei']
-plt.rcParams['axes.unicode_minus'] = False
+# 1. 指定中文字体路径（相对路径）
+font_path = "./fonts/simhei.ttf"  # 替换为你的字体路径
+
+# 2. 动态添加字体
+font_prop = fm.FontProperties(fname=font_path)
+fm.fontManager.addfont(font_path)
+
+# 3. 全局设置中文字体
+plt.rcParams["font.family"] = font_prop.get_name()  # 使用字体名称
+plt.rcParams["axes.unicode_minus"] = False  # 解决负号显示问题
 st.set_page_config(layout="wide")
 
 # 设置页面配置
