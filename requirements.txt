@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+akshare
+matplotlib
+scikit-learn
+plotly
+openpyxl
+xlrd
+requests
+beautifulsoup4
+lxml
+html5lib
+pyarrow
